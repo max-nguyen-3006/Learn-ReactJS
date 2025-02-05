@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const courses = [
+        {
+          src: "test",
+          title: "title",
+          description: "description",
+          publishedAt: "published",
+        },
+        {
+          src: "test2",
+          title: "title2",
+          description: "description2",
+          publishedAt: "published2",
+        },
+        {
+          src: "test3",
+          title: "title3",
+          description: "description3",
+          publishedAt: "published3",
+        },
+      ];
+      //App.js
+      function App() {
+        const handleClick = (title) => {
+          console.log(title);
+        };
+        return (
+          <div id="wrapper">
+            {courses.map((course, index) => (
+              <PostItem
+                key={index}
+                title={course.title}
+                src={course.src}
+                description={course.description}
+                publishedAt={course.publishedAt}
+                callback={course.callback}
+                onClick={handleClick}
+              />
+            ))}
+          </div>
+        );
+      }
+      //index.js
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+      root.render(<App />);
+
+      // PostItem.js
+      function PostItem({
+        src,
+        title,
+        description,
+        publishedAt,
+        callback = () => {},
+        onClick,
+      }) {
+        callback();
+        return (
+          <div className="post-item">
+            <img src={src} alt={title} />
+            <h2 onClick={() => onClick(title)} className="post-title">
+              {title}
+            </h2>
+            <p className="post-desc">{description}</p>
+            <p className="post-published">{publishedAt}</p>
+          </div>
+        );
+      }
+    </script>
+  </body>
+</html>

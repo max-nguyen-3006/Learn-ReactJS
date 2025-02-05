@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      function Header() {
+        return <div className="header">New Header</div>;
+      }
+      //Function
+      function Content() {
+        return <div className="content">Content</div>;
+      }
+      //Class
+      class Footer extends React.Component {
+        render() {
+          return <div className="footer">Footer</div>;
+        }
+      }
+      const app = (
+        <div class="wrapper">
+          <Header />
+          <Content />
+          <Footer />
+        </div>
+      );
+      function PostItem() {
+        return (
+          <div class="post-item">
+            <img src="test" alt="test" />
+            <h2 className="post-title">C#(.NET)</h2>
+            <p className="post-desc">This is description</p>
+            <p className="post-published">One day ago</p>
+          </div>
+        );
+      }
+      //Pratice
+      const app1 = (
+        <div class="posts-list">
+          <PostItem />{" "}
+        </div>
+      );
+
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+      root.render(app1);
+    </script>
+  </body>
+</html>
