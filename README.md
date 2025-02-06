@@ -22,3 +22,10 @@ Learn ReactJS
                 props.callback(Math.random())
              }
 7. DOM event 
+8. Children props & Render props  
+9. Webpack : Module hóa files. Import , Export. Mini file, combine files lại.
+======
+1. NPM    
+2. Yarn
+=== Folder Structure
+1. Public : Allow access from internet
