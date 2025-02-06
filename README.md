@@ -29,3 +29,13 @@ Learn ReactJS
 2. Yarn
 === Folder Structure
 1. Public : Allow access from internet
+======
+*. Hooks : Là những method, function viết sẵn bởi react -> gắn vào component để sài. có từ react 16.8.0
+  + Chỉ dùng cho function component.
+1. useState: thay đổi trạng thái của data thì UI tự động được cập nhật
+2. Mounted & Unmounted
+3. useEffect : 
+. SetSate: Chỉ khi set data mới thì react mới re-render lại page .
+. AddEventListener - Cleanup function.
+. Timer : SetInterval - SetTimeOut 
+
