@@ -14,7 +14,7 @@ function UseContext() {
   return (
       <>
         <div>useContext</div>
-        <button onClick={themeContext.toggleTheme}>Click me !</button>
+        <button className={'btn'} onClick={themeContext.toggleTheme}>Click me !</button>
         <UseContext01 />
       </>
  

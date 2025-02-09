@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Heading from "./component/heading";
 // import Content from "./useEffect";
 // import DOMEvent from "./useEffect_DOM_Event";
 // import Timer from "./useEffect_Timer";
@@ -10,6 +11,8 @@ import "./App.css";
 // import UseMemo from "./useMemo";
 
 import UseContext from "./useContext";
+import Paragraph from "./component/Paragraph";
+import Button from "./component/button";
 function App() {
   const [show, setShow] = useState(false);
   return (
@@ -17,7 +20,10 @@ function App() {
       <button onClick={() => setShow(!show)}>Toggle</button>
 
       {/* {show && <Content />} */}
-      {show && <UseContext /> }
+      {show && <UseContext />  }
+      <Heading />
+      <Paragraph />
+      <Button primary={false} />
     </div>
   );
 }

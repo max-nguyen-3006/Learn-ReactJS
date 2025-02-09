@@ -16,20 +16,24 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!-- JSX -->
     <script type="text/babel">
-      function Button({ title , isPrimary, children}) {
+      function Button({ title, isPrimary, children }) {
         console.log(children);
-        
+
         return <button>{children}</button>;
       }
 
       //App.js
       function App() {
-        return <div id="wrapper">
-            <Button title="Click me" isPrimary={false} > 
-            Test
+        return (
+          <div id="wrapper">
+            <Button title="Click me" isPrimary={false}>
+              Test
             </Button>
-            </div>;
+          </div>
+        );
       }
       //index.js
       const container = document.getElementById("root");

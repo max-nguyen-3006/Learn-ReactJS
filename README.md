@@ -22,7 +22,11 @@ Learn ReactJS
                 props.callback(Math.random())
              }
 7. DOM event 
-8. Children props & Render props  
+8. Children props & Render props : important:     
+  + <button>Click me !</button> : children . 
+  + Render props : Tuyền function qua props: ở component cha sẽ nhận       children. 
+  + 
+
 9. Webpack : Module hóa files. Import , Export. Mini file, combine files lại.
 ======
 1. NPM    
@@ -38,4 +42,25 @@ Learn ReactJS
 . SetSate: Chỉ khi set data mới thì react mới re-render lại page .
 . AddEventListener - Cleanup function.
 . Timer : SetInterval - SetTimeOut 
+4.Memo
+5. UseCallback
+6. UseMemo
+7. UseContext
+8. UseRef
+9. UseLayoutEffect
+10. UseReducer : Pending
+11. UseImpresive  ? : Pending
+======= 
+1. CSS: 
+  + Khi build thì react sẽ gom thành 1 file css .
+  + Nếu import Css theo component , khi ko add component đó sẽ ko bị thừa css đó.
+2. CSS Module : Hoạt động độc lập , ko ảnh hưởng đến nhau khi đặt trùng tên class , hoạt động độc lập
+  + Webpack sẽ  xử lý và export ra 1 object theo css module.
+  + Ko kế thừa được css 
+  + Ko thể css cho tag name được : * , h1 , h2 ... => vẫn bị ảnh hưởng chung .
+  + camelCase : đặt tên  
+3. Classnames: 
+4. clsx: là 1 function(1.class, b. class) 
+  + handle dynamic class; truyền object
+    . clsx(styles.btn, {[styles.active] : true})
 
